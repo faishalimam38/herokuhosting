@@ -3,6 +3,7 @@ const path = require('path');
 const app = require('express')();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+const port = process.env.PORT || 5000
 
 app.use(express.static('app'));
 
@@ -65,10 +66,9 @@ const getSocketByUserId = (userId) => {
   return socket;
 
 }
-server.listen(5000, function () {
+server.listen(port, function () {
 
-  console.log("server started")
-
+  console.log(`server started ${port}`)
 });
 
 
