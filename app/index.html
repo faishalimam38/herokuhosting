@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "css/style.css" />
+</head>
+
+<body>
+    <div class="login" id="login">
+        <input id="login_name" placeholder="Username">
+        <button onClick="login()">Login</button>
+    </div>
+
+
+
+    <div id="after-login" style="display:none">
+
+        <h1 id="me"></h1>
+
+        <div id="user-list" class="user-list"></div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+
+        const socket = io();
+
+    </script>
+
+    <script src="js/chat.js"></script>
+
+
+
+</body>
+
+</html>
